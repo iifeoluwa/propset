@@ -13,6 +13,9 @@ function areObjectPropsSet(objectToTest, propsToIgnore){
 			}
 			
 		}
+		else if(typeof propsToIgnore === 'array'){
+
+		}
 	}else{
 		console.log(err);
 	}
