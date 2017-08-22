@@ -28,4 +28,17 @@ describe('propset', function(){
 		assert.equal(propset(userObject), expected);
 		done();
 	});
+
+	// it('should return false when any property of an object is not set', function(done) {
+	// 	let userObject = {
+	// 		name: 'Name Property',
+	// 		email: 'email@props.co',
+	// 		password: null
+	// 	}
+
+	// 	let expected = false;
+	// 	if (userObject[password] !== (null | )) {}
+	// 	assert.equal(propset(userObject), expected);
+	// 	done();
+	// });
 })
