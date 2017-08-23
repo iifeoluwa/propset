@@ -8,6 +8,10 @@
   },
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iifeoluwa/propset.git"
+  },
   "devDependencies": {
     "mocha": "^3.5.0"
   }
