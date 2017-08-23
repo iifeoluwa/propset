@@ -51,7 +51,7 @@ describe('propset', function(){
 		}
 
 		let expected = true;
-		let skip = [password, name, age]
+		let skip = ['password', 'name', 'age']
 		assert.equal(propset(userObject, skip), expected);
 		done();
 	});

@@ -7,14 +7,8 @@ function areObjectPropsSet(objectToTest, propsToIgnore){
 		if (typeof propsToIgnore === 'undefined') {
 			return allPropSet(objectToTest);
 		}
-		else if(typeof propsToIgnore === 'string'){
-			if (objectToTest.hasOwnProperty(propsToIgnore)) {
-				return somePropSet(objectToTest, propsToIgnore);
-			}
-			
-		}
-		else if(typeof propsToIgnore === 'array'){
-
+		else if(typeof propsToIgnore === 'string' || Array.isArray(propsToIgnore)){
+			return somePropSet(objectToTest, propsToIgnore);
 		}
 	}else{
 		console.log(err);
@@ -24,8 +18,8 @@ function areObjectPropsSet(objectToTest, propsToIgnore){
 function allPropSet(objectToTest) {
 	let isPropSet = false;
 
-	for (let prop in objectToTest) {
-		if (objectToTest[prop] !== null && objectToTest !== undefined) {
+	for (let property in objectToTest) {
+		if (objectToTest[property] !== null && objectToTest !== undefined) {
 			isPropSet = true;
 		}else{
 			//property is null or undefined. kill execution
@@ -37,14 +31,14 @@ function allPropSet(objectToTest) {
 	return isPropSet;
 }
 
-function somePropSet(objectToTest, propToIgnore) {
+function somePropSet(objectToTest, propsToIgnore) {
 	let isPropSet = false;
 
-	for (let prop in objectToTest) {
+	for (let property in objectToTest) {
 		//move on to checking next property if current one is to be ignored
-		if (prop === propToIgnore) continue;
+		if (property === propsToIgnore || propsToIgnore.indexOf(property) !== -1) continue;
 
-		if (objectToTest[prop] !== null && objectToTest !== undefined) {
+		if (objectToTest[property] !== null && objectToTest !== undefined) {
 			isPropSet = true;
 		}else{
 			//property is null or undefined. kill execution
