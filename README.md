@@ -16,6 +16,7 @@ To install run `npm install propset`
 
 ### Usage
 You can begin using propset once it has been installed and added to your script like so;
+
 `const propset = require('propset')`
 
 ## Demo
@@ -29,7 +30,7 @@ let testObject = {
 	eyeColor:"blue"
 }
 
-if(propset(testObject)){
+if (propset(testObject)){
 	console.log('All object properties are set.')
 }
 ```
@@ -38,7 +39,7 @@ if(propset(testObject)){
 
 ## Contributing
 
-PRs are welcome but Kindly open an issue first to discuss potential changes/additions.
+PRs are welcome but kindly open an issue first to discuss potential changes/additions.
 
 **[Back to top](#table-of-contents)**
 
