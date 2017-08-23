@@ -1,3 +1,6 @@
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/iifeoluwa/propset/issues)
+[![HitCount](https://hitt.herokuapp.com/iifeoluwa/propset.svg)](https://github.com/iifeoluwa/propset)
+
 # propset
 
 `propset` verifies that all the needed properties for your JavaScript objects are set
