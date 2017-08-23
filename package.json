@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
+  "author": "Ifeoluwa Arowosegbe <iifeoluwa.ao@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
