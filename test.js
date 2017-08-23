@@ -69,4 +69,21 @@ describe('propset', function(){
 
 		done();
 	});
+
+	it('should throw an error if argument passed as property(ies) to be ignored is not a string or an array', function(done) {
+		let userObject = {
+			name: null,
+			email: 'email@props.co',
+			password: undefined,
+			age: 18
+		}
+
+		let propToBeIgnored = 1;
+		let anotherPropToBeIgnored = {user: 'name', type: 'lib'};
+		
+		assert.throws(() => propset(userObject, propToBeIgnored), /must be a string or array/);
+		assert.throws(() => propset(userObject, anotherPropToBeIgnored), Error);
+		
+		done();
+	});
 })
