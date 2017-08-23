@@ -55,4 +55,18 @@ describe('propset', function(){
 		assert.equal(propset(userObject, skip), expected);
 		done();
 	});
+
+	it('should throw an error if argument passed to be tested is not an object', function(done) {
+		let userDetailsArray = ['password', 'name', 'age'];
+		let userId = 1;
+		let userName = 'Name Property';
+
+		
+		assert.throws(() => propset(userDetailsArray), /not an object/);
+		assert.throws(() => propset(userName), Error);
+		assert.throws(() => propset(userId), /not an object/);
+		assert.throws(() => propset(userDetailsArray), Error);		
+
+		done();
+	});
 })

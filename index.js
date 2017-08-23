@@ -1,17 +1,22 @@
 'use strict';
 
 function areObjectPropsSet(objectToTest, propsToIgnore){
-	
-	if (typeof objectToTest === 'object') {
+		
+	if (typeof objectToTest === 'object' && !Array.isArray(objectToTest)) {
 
 		if (typeof propsToIgnore === 'undefined') {
 			return allPropSet(objectToTest);
+		}else {
+
+			if(typeof propsToIgnore === 'string' || Array.isArray(propsToIgnore)){
+				return somePropSet(objectToTest, propsToIgnore);
+			}else{
+				throw new Error('Object properties to ignore must be a string or array.');
+			}
 		}
-		else if(typeof propsToIgnore === 'string' || Array.isArray(propsToIgnore)){
-			return somePropSet(objectToTest, propsToIgnore);
-		}
+		
 	}else{
-		console.log(err);
+		throw new Error('Argument passed is not an object.');
 	}
 }
 
