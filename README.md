@@ -21,6 +21,7 @@ You can begin using propset once it has been installed and added to your script 
 
 ### Signature
 `propset(object, array|string)`
+
 First parameter is the object to be tested.
 Second parameter should contain names of properties in the object to be tested. These properties would be ignored i.e propset would not check if those properties are set.
 
