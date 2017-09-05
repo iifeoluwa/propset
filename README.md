@@ -17,7 +17,12 @@ To install run `npm install propset`
 ### Usage
 You can begin using propset once it has been installed and added to your script like so;
 
-`const propset = require('propset')`
+`const propset = require('propset');`
+
+### Signature
+`propset(object, array|string)`
+First parameter is the object to be tested.
+Second parameter should contain names of properties in the object to be tested. These properties would be ignored i.e propset would not check if those properties are set.
 
 ## Demo
 ```
@@ -33,6 +38,19 @@ let testObject = {
 if (propset(testObject)){
 	console.log('All object properties are set.')
 }
+
+let anotherTestObject = {
+        firstName:"John", 
+        lastName:"Doe", 
+        age:null, 
+        eyeColor:undefined
+}
+
+//the properties passed as the second argument are ignored and the object test passes.
+if (propset(anotherTestObject, ['age', 'eyeColor'])){
+        console.log('All object properties are set.')
+}
+
 ```
 
 **[Back to top](#table-of-contents)**
